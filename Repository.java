@@ -22,4 +22,8 @@ public class Repository extends PropertyChangeSupport {
  
         return single_instance;
     } 
+
+    public ArrayList<Shape> getShapes() {
+        return shapes;
+    }
 }
