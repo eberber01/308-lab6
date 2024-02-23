@@ -16,7 +16,13 @@ public class CircleBuilder implements Runnable {
             int radius = rand.nextInt(40);
 
             Circle circle = new Circle(x, y, new Color(r, g, b), radius);
-            repo.addShape(circle);
+
+            Eye eye = new Eye();
+            eye.add(circle);
+
+            repo.addShape(eye);
+            //repo.addShape(circle);
+
 
             try {
                 Thread.sleep(1000);

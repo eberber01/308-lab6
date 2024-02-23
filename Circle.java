@@ -1,6 +1,6 @@
 import java.awt.*;
 
-public class Circle {
+public class Circle extends Component{
     private int x;
     private int y;
     private Color color;

@@ -1,6 +1,6 @@
 import java.awt.*;
 
-public class Box {
+public class Box extends Component{
     private int x;
     private int y;
     private Color color;

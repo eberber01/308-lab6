@@ -17,7 +17,12 @@ public class BoxBuilder implements Runnable {
             int height = rand.nextInt(80);
 
             Box box = new Box(x, y, new Color(r, g, b), width, height);
-            repo.addShape(box);
+
+            Eye eye = new Eye();
+            eye.add(box);
+
+            repo.addShape(eye);
+            //repo.addShape(box);
 
             try {
                 Thread.sleep(1000);
