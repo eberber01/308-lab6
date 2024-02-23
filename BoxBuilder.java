@@ -1,32 +1,31 @@
 import java.awt.*;
+import java.awt.geom.Rectangle2D;
 import java.util.Random;
 
 public class BoxBuilder implements Runnable {
     Random rand = new Random();
     Repository repo = Repository.getInstance();
 
-
     public void run() {
         while (true) {
             int x = rand.nextInt(950);
             int y = rand.nextInt(950);
-            int r = rand.nextInt(255);
-            int g = rand.nextInt(255);
-            int b = rand.nextInt(255);
-            int width = rand.nextInt(80);
-            int height = rand.nextInt(80);
+            Color color = new Color(rand.nextInt(255), rand.nextInt(255), rand.nextInt(255));
+            int width = rand.nextInt(40) + 40; // Ensure minimum size
+            int height = rand.nextInt(40) + 40;
 
-            Box box = new Box(x, y, new Color(r, g, b), width, height);
+            Box box = new Box(x, y, color, width, height);
 
-            Eye eye = new Eye();
-            eye.Add(box);
+            // Decorate the box with an eye
+            Decorator eyeDecorator = new Eye();
+            eyeDecorator.setComponent(box);
 
-            //repo.addShape(eye);
-            repo.addShape(box);
+            repo.addShape(eyeDecorator);
 
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
             }
         }
     }

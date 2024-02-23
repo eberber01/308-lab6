@@ -49,4 +49,10 @@ public class Circle extends Component{
         g.setColor(color);
         g.fillOval(x, y, 2 * radius, 2 * radius);
     }
+
+    @Override
+    public int[] getDimensions() {
+        // For a circle, width and height are both 2*radius
+        return new int[]{x, y, 2*radius, 2*radius};
+    }
 }

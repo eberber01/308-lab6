@@ -59,4 +59,10 @@ public class Box extends Component{
         g.setColor(color);
         g.fillRect(x, y, width, height);
     }
+
+    @Override
+    public int[] getDimensions() {
+        return new int[]{x, y, width, height};
+    }
+
 }

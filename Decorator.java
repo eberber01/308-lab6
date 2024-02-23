@@ -1,7 +1,18 @@
-public class Decorator extends Component{
-    Component component = new Component();
+import java.awt.*;
 
-    public void Add(Component shape){
+public abstract class Decorator extends Component {
+    protected Component component;
 
+    public void setComponent(Component component) {
+        this.component = component;
     }
+
+    @Override
+    public void draw(Graphics g) {
+        if (component != null) {
+            component.draw(g);
+        }
+    }
+
+
 }

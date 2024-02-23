@@ -17,11 +17,10 @@ public class CircleBuilder implements Runnable {
 
             Circle circle = new Circle(x, y, new Color(r, g, b), radius);
 
-            Eye eye = new Eye();
-            eye.Add(circle);
+            Decorator eyeDecorator = new Eye();
+            eyeDecorator.setComponent(circle); // Decorate the circle with an eye
 
-            //repo.addShape(eye);
-            repo.addShape(circle);
+            repo.addShape(eyeDecorator); // Add the decorated component to the repository
 
 
             try {
