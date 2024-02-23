@@ -20,8 +20,8 @@ public class CircleBuilder implements Runnable {
             Eye eye = new Eye();
             eye.Add(circle);
 
-            repo.addShape(eye);
-            //repo.addShape(circle);
+            //repo.addShape(eye);
+            repo.addShape(circle);
 
 
             try {

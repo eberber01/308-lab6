@@ -21,8 +21,8 @@ public class BoxBuilder implements Runnable {
             Eye eye = new Eye();
             eye.Add(box);
 
-            repo.addShape(eye);
-            //repo.addShape(box);
+            //repo.addShape(eye);
+            repo.addShape(box);
 
             try {
                 Thread.sleep(1000);
