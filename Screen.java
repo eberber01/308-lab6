@@ -6,11 +6,11 @@ import java.util.ArrayList;
 
 public class Screen extends JPanel implements PropertyChangeListener {
 
-    ArrayList<Object> shapes = Repository.getInstance().getShapes();
+    ArrayList<Component> shapes = Repository.getInstance().getShapes();
 
     public void paintComponent(Graphics g){
         super.paintComponent(g);
-        for(Object shape : shapes){
+        for(Component shape : shapes){
             shape.draw(g);
         }
         /*for (Object shape : shapes) {

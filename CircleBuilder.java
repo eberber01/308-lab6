@@ -18,7 +18,7 @@ public class CircleBuilder implements Runnable {
             Circle circle = new Circle(x, y, new Color(r, g, b), radius);
 
             Eye eye = new Eye();
-            eye.add(circle);
+            eye.Add(circle);
 
             repo.addShape(eye);
             //repo.addShape(circle);

@@ -4,14 +4,14 @@ import java.beans.PropertyChangeSupport;
 public class Repository extends PropertyChangeSupport {
     private static Repository single_instance = null;
 
-    private ArrayList<Object> shapes;
+    private ArrayList<Component> shapes;
 
     private Repository(){
         super(new Object());
-        shapes = new ArrayList<Object>();
+        shapes = new ArrayList<Component>();
     }
 
-    public void addShape(Object shape){
+    public void addShape(Component shape){
         shapes.add(shape);
         firePropertyChange("New Shape", null, shape);
     }
@@ -23,7 +23,7 @@ public class Repository extends PropertyChangeSupport {
         return single_instance;
     }
 
-    public ArrayList<Object> getShapes() {
+    public ArrayList<Component> getShapes() {
         return shapes;
     }
 }

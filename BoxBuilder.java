@@ -19,7 +19,7 @@ public class BoxBuilder implements Runnable {
             Box box = new Box(x, y, new Color(r, g, b), width, height);
 
             Eye eye = new Eye();
-            eye.add(box);
+            eye.Add(box);
 
             repo.addShape(eye);
             //repo.addShape(box);
