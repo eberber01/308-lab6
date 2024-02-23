@@ -13,13 +13,7 @@ public class Screen extends JPanel implements PropertyChangeListener {
         for(Component shape : shapes){
             shape.draw(g);
         }
-        /*for (Object shape : shapes) {
-            if (shape instanceof Circle) {
-                ((Circle) shape).draw(g);
-            } else if(shape instanceof Box){
-                ((Box) shape).draw(g);
-            }
-        }*/
+
     }
 
     @Override
